@@ -51,4 +51,27 @@ elif choice == "C":
         print("You chose a heavy load without a strong GPA. Stress gets really high.")
 else:
     print("Invalid choice.")
+# -------------------------------
+# Step 3: Study Strategy Decision
+# -------------------------------
+
+subjects = ["Programming", "Math", "English", "History"]
+
+print("\nChoose a subject to focus on:", subjects)
+study_choice = input("Your subject: ")
+
+if study_choice in subjects:
+    if study_choice == "Programming" and current_gpa < 3.0:
+        current_gpa += 0.4
+        print("Focusing on Programming improved your GPA.")
+    elif study_choice == "Math" or study_choice == "English":
+        social_points -= 5
+        print("Extra work on Math/English decreased your social life a bit.")
+    elif not study_choice == "History":
+        stress_level += 5
+        print("This subject added some stress.")
+    else:
+        print("Balanced effort in English kept you steady.")
+else:
+    print("Invalid study choice. No changes made.")
 
