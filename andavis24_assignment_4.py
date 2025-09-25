@@ -72,6 +72,35 @@ if study_choice in subjects:
         print("This subject added some stress.")
     else:
         print("Balanced effort in English kept you steady.")
-else:
+elif study_choice not in subjects:  # membership operator with not in
     print("Invalid study choice. No changes made.")
 
+# -------------------------------
+# Step 4: Final Semester Assessment
+# -------------------------------
+
+print("\n--- Final Semester Assessment ---")
+
+# Identity operator example: type checking
+if type(current_gpa) is not float:
+    print("Warning: GPA is not a float. Converting...")
+    current_gpa = float(current_gpa)
+
+# Nested if statements
+if current_gpa >= 3.5:
+    if stress_level < 50:
+        ending = "Graduated with Honors"
+    else:
+        ending = "Graduated, but burned out from stress."
+elif current_gpa >= 2.0:
+    if social_points > 40:
+        ending = "Graduated with a healthy balance of academics and social life."
+    else:
+        ending = "Barely passed due to stress and low social support."
+else:
+    ending = "On academic probation. Better luck next time."
+
+# Final results
+print(f"Final Stats → GPA: {current_gpa:.2f}, Study Hours: {study_hours}, "
+      f"Social Points: {social_points}, Stress Level: {stress_level}")
+print("Ending:", ending)
