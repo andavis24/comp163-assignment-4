@@ -1,5 +1,5 @@
 # COMP 163 - Assignment 4: College Life Adventure Game
-# Author: Your Name
+# Author: Ajani Davis
 # This program simulates college decisions using branching logic.
 
 # -------------------------------
@@ -104,3 +104,4 @@ else:
 print(f"Final Stats → GPA: {current_gpa:.2f}, Study Hours: {study_hours}, "
       f"Social Points: {social_points}, Stress Level: {stress_level}")
 print("Ending:", ending)
+
